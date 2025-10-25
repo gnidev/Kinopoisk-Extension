@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Kinopoisk.vip Mirror Watch",
+  "version": "1.0.0",
+  "description": "Adds a mirror button that opens the current title on kinopoisk.vip.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.kinopoisk.ru/film/*",
+        "https://www.kinopoisk.ru/series/*",
+        "http://www.kinopoisk.ru/film/*",
+        "http://www.kinopoisk.ru/series/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
